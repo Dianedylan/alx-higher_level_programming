@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 size_t list_len(listint_t *head);
@@ -12,41 +14,41 @@ listint_t *add_node(listint_t **head, int num);
  */
 int is_palindrome(listint_t **head)
 {
-listint_t *current = *head;
-listint_t *tmp_head = NULL;
-listint_t *tmp_current = NULL;
-size_t i = 0, len = list_len(*head);
+	listint_t *current = *head;
+	listint_t *tmp_head = NULL;
+	listint_t *tmp_current = NULL;
+	size_t i = 0, len = list_len(*head);
 
-if (*head == NULL || (*head)->next == NULL)
-return (1);
-while (i < (len / 2))
-{
-add_node(&tmp_head, current->n);
-current = current->next;
-i++;
-}
-if ((len % 2) != 0)
-{
-current = current->next;
-i++;
-}
-tmp_current = tmp_head;
-while (i < len)
-{
-if (tmp_current->n == current->n)
-{
-current = current->next;
-mp_current = tmp_current->next;
-}
-else
-{
-free_listint(tmp_head);
-return (0);
-}
-i++;
-}
-free_listint(tmp_head);
-return (1);
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
+	while (i < (len / 2))
+	{
+		add_node(&tmp_head, current->n);
+		current = current->next;
+		i++;
+	}
+	if ((len % 2) != 0)
+	{
+		current = current->next;
+		i++;
+	}
+	tmp_current = tmp_head;
+	while (i < len)
+	{
+		if (tmp_current->n == current->n)
+		{
+			current = current->next;
+			tmp_current = tmp_current->next;
+		}
+		else
+		{
+			free_listint(tmp_head);
+			return (0);
+		}
+		i++;
+	}
+	free_listint(tmp_head);
+	return (1);
 }
 
 /**
@@ -57,19 +59,19 @@ return (1);
  */
 size_t list_len(listint_t *head)
 {
-unsigned int total = 0;
-listint_t *current = head;
+	unsigned int total = 0;
+	listint_t *current = head;
 
-if (head == NULL)
-return (0);
+	if (head == NULL)
+		return (0);
 
-while (current)
-{
-total++;
-current = current->next;
-}
+	while (current)
+	{
+		total++;
+		current = current->next;
+	}
 
-return (total);
+	return (total);
 }
 
 /**
@@ -81,14 +83,14 @@ return (total);
  */
 listint_t *add_node(listint_t **head, int num)
 {
-listint_t *new = malloc(sizeof(listint_t));
+	listint_t *new = malloc(sizeof(listint_t));
 
-if (new == NULL)
-return (NULL);
+	if (new == NULL)
+		return (NULL);
 
-new->n = num;
-new->next = *head;
-*head = new;
+	new->n = num;
+	new->next = *head;
+	*head = new;
 
-return (*head);
+	return (*head);
 }
