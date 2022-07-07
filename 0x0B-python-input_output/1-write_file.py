@@ -8,4 +8,4 @@ def write_file(filename="", text=""):
     """ module write_file
     """
     with open(filename, 'w', endcoding="utf-8") as f:
-        return f.write(len(text))
+        return f.write(text)
