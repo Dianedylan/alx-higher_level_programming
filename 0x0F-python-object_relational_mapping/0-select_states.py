@@ -10,16 +10,16 @@ from sys import argv
 import MySQLdb
 
 if __name__ == "__main__":
-    sql_user = argv[1]
-    sql_pass = argv[2]
-    db_name = argv[3]
+    mysql_username = argv[1]
+    mysql_password = argv[2]
+    database_name = argv[3]
 
     db = MySQLdb.connect(
         host="127.0.0.1",
         port=3306,
-        user=sql_user,
-        passwd=sql_pass,
-        db=db_name
+        user=mysql_username,
+        passwd=mysql_password,
+        db=database_name
     )
 
     cur = db.cursor()
