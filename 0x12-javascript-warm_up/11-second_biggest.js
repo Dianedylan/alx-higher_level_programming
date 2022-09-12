@@ -1,20 +1,28 @@
 #!/usr/bin/node
-
-function second (myArray) {
-  if (myArray.length === 2 || myArray.length === 3) { return (0); }
-
-  let max = myArray[2];
-  let secondMax = myArray[3];
-
-  for (let i = 2; i < myArray.length; i++) {
-    if (myArray[i] > max) {
-      secondMax = max;
-      max = myArray[i];
-    } else if (myArray[i] > secondMax && myArray[i] < max) {
-      secondMax = myArray[i];
-    }
-  }
-  return (secondMax);
+function swap (arr, left, right) {
+  const temp = arr[left];
+  arr[left] = arr[right];
+  arr[right] = temp;
 }
 
-console.log(second(process.argv));
+function sort (arr, len) {
+  for (let i = 0; i < len; i++) {
+    for (let j = 0, stp = len - i; j < stp; j++) {
+      if (arr[j] > arr[j + 1]) {
+        swap(arr, j, j + 1);
+      }
+    }
+  }
+  return arr;
+}
+
+if (isNaN(parseInt(process.argv[2])) || isNaN(parseInt(process.argv[3]))) {
+  console.log(0);
+} else {
+  let arr = [];
+  for (let i = 2; i < process.argv.length; i++) {
+    arr.push(parseInt(process.argv[i]));
+  }
+  arr = sort(arr, process.argv.length - 2);
+  console.log(arr[process.argv.length - 4]);
+}
