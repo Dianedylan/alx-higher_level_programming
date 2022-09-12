@@ -1,21 +1,32 @@
 #!/usr/bin/python3
-
-
-import MySQLdb
+"""
+Task 0:
+0-select_states.py
+Lists all states from the database hbtn_0e_0_usa
+Uses:
+0-select_states.sql
+"""
 from sys import argv
+import MySQLdb
 
-'''
-a script that lists all states
-from the database
-'''
 if __name__ == "__main__":
-    con = MySQLdb.connect(
-        host="localhost", port=3306, user=argv[1],
-        password=argv[2], database=argv[3])
-    cursor = con.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    db = cursor.fetchall()
-    for i in db:
-        print(i)
-    cursor.close()
+    sql_user = argv[1]
+    sql_pass = argv[2]
+    db_name = argv[3]
+
+    db = MySQLdb.connect(
+        host="127.0.0.1",
+        port=3306,
+        user=sql_user,
+        passwd=sql_pass,
+        db=db_name
+    )
+
+    cur = db.cursor()
+    amount = cur.execute("SELECT * FROM states ORDER BY states.id;")
+
+    for i in range(amount):
+        results = cur.fetchone()
+        print(results)
+
     db.close()
