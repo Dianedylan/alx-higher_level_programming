@@ -1,0 +1,15 @@
+# 0x15. JavaScript - Web jQuery
+
+1. [What is JavaScript?] (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+2. [Selector](https://jquery-tutorial.net/selectors/using-elements-ids-and-classes/)
+3. [Get and set content](https://jquery-tutorial.net/dom-manipulation/getting-and-setting-content/)
+4. [Manipulate CSS classes](https://jquery-tutorial.net/dom-manipulation/getting-and-setting-css-classes/)
+5. [Manipulate DOM elements](https://jquery-tutorial.net/dom-manipulation/the-append-and-prepend-methods/)
+6. [API](https://oscarotero.com/jquery/)
+7. [Introduction to AJAX](https://jquery-tutorial.net/ajax/introduction/)
+8. [GET & POST request](https://jquery-tutorial.net/ajax/the-get-and-post-methods/)
+9. [JQuery Ajax Tutorial #1 - Using AJAX & API’s](https://youtu.be/fEYx8dQr_cQ)
+10. [What went wrong? Troubleshooting JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
+11. [JQuery](https://jquery.com/)
+12. [JQuery API](https://api.jquery.com/)
+13. [JQuery Ajax](https://learn.jquery.com/ajax/)
