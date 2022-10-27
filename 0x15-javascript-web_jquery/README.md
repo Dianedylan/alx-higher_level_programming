@@ -1,6 +1,6 @@
 # 0x15. JavaScript - Web jQuery
 
-1. [What is JavaScript?] (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+1. [What is JavaScript?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 2. [Selector](https://jquery-tutorial.net/selectors/using-elements-ids-and-classes/)
 3. [Get and set content](https://jquery-tutorial.net/dom-manipulation/getting-and-setting-content/)
 4. [Manipulate CSS classes](https://jquery-tutorial.net/dom-manipulation/getting-and-setting-css-classes/)
